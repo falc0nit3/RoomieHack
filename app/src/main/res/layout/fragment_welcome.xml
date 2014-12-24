@@ -1,0 +1,74 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:facebook="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent">
+
+    <LinearLayout
+        android:id="@+id/user_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <!--Toolbar-->
+        <LinearLayout
+            android:id="@+id/headerbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_height"
+            android:clickable="true"
+            android:orientation="vertical"
+            style="@style/HeaderBar">
+
+            <include layout="@layout/toolbar_actionbar" /> <!-- placeholder, empty except on L -->
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/coverPic"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="fitXY"/>
+
+        <com.facebook.widget.ProfilePictureView
+            android:id="@+id/selection_profile_pic"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/single_hpad"
+            android:gravity="center_horizontal"
+            facebook:preset_size="small" />
+
+        <TextView
+            style="@style/welcomeText"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Welcome"/>
+
+        <TextView
+            android:id="@+id/selection_user_name"
+            style="@style/nameText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            tools:text="Rohith"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal">
+        <com.gc.materialdesign.views.ButtonRectangle
+            android:id="@+id/beginMatching"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#1E88E5"
+            android:text="@string/get_started" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">HackARoomie</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <!--<string name="app_id">3ZLW/TAqPvR43Zh79ejFQDOdka8=</string>-->
+    <string name="app_id">814586241935315</string>
+    <string name="settings">Settings</string>
+    <string name="get_started">Get Started</string>
+
+
+    <string-array name="nav_drawer_items">
+        <item>Now Playing</item>
+        <item>Upcoming</item>
+        <item>Top Rated</item>
+        <item>Genres</item>
+        <item>Celebrities</item>
+        <item>Articles</item>
+        <item>Reports</item>
+        <item>About</item>
+    </string-array>
+
+</resources>

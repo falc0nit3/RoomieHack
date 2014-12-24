@@ -1,0 +1,50 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "21.1.1"
+
+    defaultConfig {
+        applicationId "com.att.hackaroomie"
+        minSdkVersion 16
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    repositories {
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+        mavenCentral()
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(dir: '../libraries', include: ['*.jar'])
+    compile fileTree(dir: '../libraries/ibm_bluemix', include: ['*.jar'])
+
+    // Can be used to achieve the material design for pre 5.0 devices
+    compile 'com.android.support:support-v4:21.0.+'
+    compile 'com.android.support:appcompat-v7:21.0.+'
+    compile 'com.android.support:cardview-v7:21.0.+'
+    compile 'com.android.support:recyclerview-v7:21.0.+'
+
+    // Facebook SDK
+    compile project(':libraries:FacebookSDK')
+
+    // Material Design
+    compile project(':libraries:MaterialDesign:app')
+
+    // Glide Image Loader
+    compile 'com.github.bumptech.glide:glide:3.4.+'
+
+    // Parallax library for cool looking swipes.
+    compile 'com.xgc1986.ParallaxPagerTransformer:library:0.2-SNAPSHOT@aar'
+
+}

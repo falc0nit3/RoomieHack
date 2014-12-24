@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="ibmdata">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libraries/ibm_bluemix/ibmdata.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

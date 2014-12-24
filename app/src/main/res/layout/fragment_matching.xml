@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/parallaxContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="center"
+            android:id="@+id/image"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFFFFFFF"
+            android:textStyle="bold"
+            android:textSize="72sp"
+            android:layout_marginLeft="20dp"
+            android:paddingLeft="20dp"
+            android:id="@+id/name"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+
+            />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true">
+
+            <com.att.hackaroomie.widget.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                custom:fab_colorNormal="@color/accent"
+                custom:fab_colorPressed="@color/accent_pressed"
+                custom:fab_type="mini"
+                android:layout_alignBottom="@+id/fabIcon"
+                custom:fab_colorRipple="@color/ripple"/>
+
+            <ImageView
+                android:id="@+id/fabIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="2dp"
+                android:padding="5dp"
+                android:src="@drawable/add_schedule_button_icon_unchecked"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

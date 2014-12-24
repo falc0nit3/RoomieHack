@@ -1,0 +1,2 @@
+include ':app', ':libraries:FacebookSDK', ':FacebookSDK', 'libraries:MaterialDesign:app'
+project(':FacebookSDK').projectDir = new File('libraries/FacebookSDK')
