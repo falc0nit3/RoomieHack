@@ -316,10 +316,14 @@ public abstract class BaseActivity extends ActionBarActivity {
                     Log.e("Error", error.getErrorMessage());
                 }
                 else{
-                    String coverPicUrl = graphObject.getPropertyAs("cover", GraphObject.class ).getProperty("source").toString();
+                    String coverPicUrl = "";
+                    GraphObject graphObjectResponse = graphObject.getPropertyAs("cover", GraphObject.class );
+
+                    if(graphObjectResponse != null){
+                        coverPicUrl = graphObjectResponse.getProperty("source").toString();
+                    }
 
                     Log.v(TAG, "Cover Pic is : " + coverPicUrl);
-
                     mUser.setCoverPhoto(coverPicUrl);
 
                     // Relay the fetched information downward for it to be handled

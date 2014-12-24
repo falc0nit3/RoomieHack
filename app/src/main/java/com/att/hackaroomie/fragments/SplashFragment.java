@@ -39,7 +39,7 @@ public class SplashFragment extends BaseFragment {
         authButton.setFragment(this);
 
         // Set correct permissions here in order to retrieve the info we need for a good 'match' between potential roommates
-        authButton.setReadPermissions(Arrays.asList("user_location", "user_birthday", "user_likes", "email", "public_profile"));
+        authButton.setReadPermissions(Arrays.asList("user_location", "user_birthday", "user_likes", "email"));
 
         return view;
     }
